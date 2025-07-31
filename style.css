@@ -1,0 +1,61 @@
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: #f6f6f6;
+  color: #333;
+  text-align: center;
+}
+
+header {
+  background: #fff;
+  padding: 2rem 1rem;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.logo {
+  width: 80px;
+  height: auto;
+  margin-bottom: 1rem;
+}
+
+h1 {
+  margin: 0;
+  font-size: 2.5rem;
+}
+
+.subtitle {
+  font-size: 1.2rem;
+  color: #777;
+}
+
+main {
+  padding: 2rem 1rem;
+}
+
+.screenshot {
+  max-width: 90%;
+  height: auto;
+  border-radius: 1rem;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.1);
+  margin-bottom: 2rem;
+}
+
+.description {
+  max-width: 600px;
+  margin: 0 auto 2rem auto;
+}
+
+.appstore-button img {
+  width: 180px;
+  transition: transform 0.2s;
+}
+
+.appstore-button img:hover {
+  transform: scale(1.05);
+}
+
+footer {
+  padding: 1rem;
+  font-size: 0.9rem;
+  color: #aaa;
+}
