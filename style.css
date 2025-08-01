@@ -76,16 +76,18 @@ main {
 /* Stil für großen oberen Screenshot */
 .screenshot-top-container {
   width: 100%;
-  max-width: 590px; /* Kombinierte Breite der beiden unteren Screenshots + Abstand */
+  max-width: 600px;
   margin: 0 auto 2rem auto;
+  padding: 0 1rem;
 }
 
 .screenshot-top {
   width: 100%;
   height: auto;
-  border-radius: var(--border-radius);
+  border-radius: var(--border-radius) !important;
   box-shadow: var(--shadow);
   transition: transform 0.3s ease;
+  border: 1px solid #eee;
 }
 
 .screenshot-top:hover {
