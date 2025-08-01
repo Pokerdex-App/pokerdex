@@ -75,12 +75,10 @@ main {
 
 /* Stil für großen oberen Screenshot */
 .screenshot-top-container {
-  display: flex;
-  justify-content: center;
   width: 100%;
   max-width: 590px;
   margin: 0 auto 2rem auto;
-  padding: 0 1rem;
+  /* padding: 0 1rem;  */
 }
 
 .screenshot-top {
