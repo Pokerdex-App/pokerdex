@@ -1,10 +1,10 @@
-
 :root {
-  --primary-color: #d32f2f; /* Modernes Rot */
-  --secondary-color: #ffcdd2; /* Helles Akzent-Rot */
+  --primary-color: #d32f2f;
+  --secondary-color: #ffcdd2;
   --text-color: #333;
   --light-gray: #f8f9fa;
   --shadow: 0 4px 12px rgba(0,0,0,0.08);
+  --border-radius: 20px;
 }
 
 body {
@@ -69,23 +69,45 @@ main {
 
 .download-section h2 {
   font-size: 2.2rem;
-  margin-bottom: 2rem;
+  margin-bottom: 2.5rem;
   color: var(--primary-color);
 }
 
+/* Stil für großen oberen Screenshot */
+.screenshot-top-container {
+  width: 100%;
+  max-width: 590px; /* Kombinierte Breite der beiden unteren Screenshots + Abstand */
+  margin: 0 auto 2rem auto;
+}
+
+.screenshot-top {
+  width: 100%;
+  height: auto;
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow);
+  transition: transform 0.3s ease;
+}
+
+.screenshot-top:hover {
+  transform: translateY(-5px);
+}
+
+/* Container für die beiden unteren Screenshots */
 .screenshots-container {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
   gap: 30px;
   margin-bottom: 2rem;
+  max-width: 590px;
+  margin: 0 auto 2rem auto;
 }
 
 .screenshot {
   width: 100%;
   max-width: 280px;
   height: auto;
-  border-radius: 20px;
+  border-radius: var(--border-radius);
   box-shadow: var(--shadow);
   transition: transform 0.3s ease;
 }
@@ -97,15 +119,16 @@ main {
 .description {
   max-width: 700px;
   margin: 0 auto;
-  padding: 2rem;
+  padding: 2.5rem;
   background: var(--light-gray);
-  border-radius: 16px;
+  border-radius: var(--border-radius);
   box-shadow: var(--shadow);
 }
 
 .description h2 {
   color: var(--primary-color);
   margin-top: 0;
+  margin-bottom: 1.5rem;
 }
 
 .appstore-button {
@@ -127,6 +150,7 @@ footer {
   font-size: 1rem;
   color: #777;
   background: var(--light-gray);
+  margin-top: 2rem;
 }
 
 /* Responsive Design */
@@ -135,7 +159,8 @@ footer {
     gap: 20px;
   }
   
-  .screenshot {
+  .screenshot-top-container,
+  .screenshots-container {
     max-width: 100%;
   }
   
@@ -146,15 +171,39 @@ footer {
   .subtitle {
     font-size: 1.1rem;
   }
+  
+  .description {
+    padding: 1.8rem;
+  }
 }
 
-@media (max-width: 480px) {
+@media (max-width: 620px) {
   .screenshots-container {
     flex-direction: column;
     align-items: center;
+    gap: 25px;
   }
   
   .screenshot {
-    max-width: 90%;
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .logo {
+    width: 85px;
+    height: 85px;
+  }
+  
+  h1 {
+    font-size: 2rem;
+  }
+  
+  .download-section h2 {
+    font-size: 1.8rem;
+  }
+  
+  .description {
+    padding: 1.5rem;
   }
 }
